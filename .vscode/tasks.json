@@ -1,0 +1,22 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "clang++ build active file",
+      "type": "shell",
+      "command": "/usr/bin/clang++",
+      "args": [
+        "-g",
+        "${workspaceRoot}/virtual~.cpp", // 这里是你自己的源文件的名字
+        "-o",
+        "${workspaceRoot}/virtual~.out"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
